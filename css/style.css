@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+body{
+    background-image:url(../imagens/tarde.jpg);
+    background-size: cover;
+}
+#container{
+    background-color: rgba(236, 232, 219, 0.808);
+    /* centralizar um bloco preciso de widht e margin */
+
+    /* Definindo largura e
+    margem automática, o resultado
+    é a centralização da caixa */
+    width: 80%;
+    margin: auto;
+
+    /* limitando largura maxima*/
+    max-width: 1200px;
+
+    /* limitando a largura minima */
+    min-width: 600px;
+
+    padding: 20px;
+    border-radius: 10px;
+    /* horizontal(X) vertical(Y) blur cor */
+    box-shadow: 5px 5px 50px rgb(15, 187, 130);
+}
+
+img{
+    /* Torna imagem flexivel/responsivo */
+    max-width: 100%;
+}
+
+h1{
+    background: linear-gradient(45deg,teal,rgb(115, 141, 226));
+    font-family: 'Rubik Iso', cursive;
+    text-align: center;
+    font-size: 50px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 4px;
+}
+h2 {
+    background-image: url(../imagens/oriental-tiles.png);
+    color: white;
+    padding: 10px;
+    /* border-left-width: 20px;
+    border-left-color: yellow;
+    border-left-style: solid; */
+    border-left: 20px yellow solid;
+    
+    /* border-right-width: 20px;
+    border-right-color: yellow;
+    border-right-style: solid; */
+    border-right: solid 20px yellow;
+}
+
+/* Seletor CLASSE */
+.centralizar { text-align: center; }
+.sombra-texto { text-shadow: black 2px 2px 3px; }
+.borda-arredondada { border-radius: 8px; }
+.destaque {
+    background-color: yellow;
+    
+    /* Primeiro Valor (cima/embaixo)
+    Segundo Valor (esquerda/direita) */
+
+    /* padding: 2px 4px; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    border: solid 2px red;
+}
+
+/* Regras para o menu e seus links */
+
+nav { text-align: center; }
+
+/* Regra de estado inicial do link
+Seletor DESCENDENTE */
+nav a { 
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    width: 33.33%;
+    display: inline-block;
+
+    /* Altera o comportamento
+    Box Model CSS */
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* Regra de acionamento do link
+Seletor DESCENDENTE + PSEUDO-CLASSE */
+/* hover: mouse
+    focus: dedo e tab */
+nav a:hover, nav a:focus{
+    background-color: darkblue;
+    transform: translateY(-10px);
+    /* transform: rotateZ(90deg) translateY(100px); */
+}
+
+figure{
+    text-align: center;
+    background-color: rgba(68, 136, 85, 0.753);
+
+    /* Tornando o elemento referência para o posicionamento */
+    position: relative;
+
+    margin: 0 auto; /* css reset */
+    max-width: 419px; /*o espaço bloco invisivel agora ocupa a largura da imagem(205x419)*/
+}
+figcaption{
+    width: 100%; /*devolver a area do figcaption(parece block ocupa linha) que foi perdido com absolute*/
+    font-weight: bold;
+    background-color: rgba(240, 234, 234, 0.733);
+    position: absolute; /*deixa solta para posicionamento*/
+    
+    /* Coodenadas em relção ao body, top = inicio da pagina*/
+    /*bottom: 0; em relação ao tamanho atual da pagina
+    se afasta de baixo para cima*/
+
+    bottom: 90px;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+}
+
+figure{
+    filter: grayscale(100%);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+figure:hover{
+    filter: none;
+    transform: scale(0.9) rotate(-2deg); /*Escala 1 é o tamanho normal*/
+    
+}
+
+/* seletor descendente */
+.centralizar img{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+ul{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ul li{
+    color: rgb(211, 50, 22);
+}
+ /* formatando primeiro li descendente de ul */
+ul li:first-child{
+    color: rgb(90, 134, 2);
+}
+
+ul li:last-child{
+    color: black;
+}
+ul li:nth-child(4){
+    color: rgb(128, 36, 214);
+}
+
+ul li:nth-child(odd){
+    background-color: rgb(221, 194, 103);
+}
+ul li:nth-child(even){
+    background-color: cornflowerblue;
+}
